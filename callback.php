@@ -1,4 +1,4 @@
-<?php
+git<?php
 
 session_start();
 require_once './config.php';
@@ -21,10 +21,6 @@ if (isset($_GET['code'])) {
     $lastName  = $google_account->familyName;
     $gender  = $google_account->gender;
     $verifiedEmail = $google_account->verifiedEmail;
-
-
-
-
 
     // Check if the user exists
     $sql = "SELECT urole, id FROM invoice_users WHERE token = ?";
