@@ -1,0 +1,12 @@
+#Turn Rewrite Engine On
+RewriteEngine On
+
+#Remove .php extension form domain.php
+RewriteRule ^index/?$ index.php [NC,L]
+
+
+#Rewrite URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
